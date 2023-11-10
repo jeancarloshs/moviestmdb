@@ -1,11 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Outfit:wght@300;400;600&family=Roboto:wght@100;300;500;900&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --blue-primary: hsla(202, 89%, 24%, 1);
+  --blue-secundary: hsla(202, 80%, 14%, 1);
+  --green-primary: hsla(151, 70%, 49%, 1);
+  --white-primary: hsla(0, 0%, 100%, 1);
+  --gray-primary: hsla(0, 0%, 85%, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,12 +20,27 @@
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+  align-items: center;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--blue-secundary);
+  position: relative;
+  height: 100%;
+  max-width: 1920px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-primary);
+  transition: 0.5s;
+}
+
+a:hover {
+  color: var(--green-primary);
 }
