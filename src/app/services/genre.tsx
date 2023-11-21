@@ -1,6 +1,6 @@
 
-const URL_API = process.env.REACT_APP_API_URL;
-const API_KEY = process.env.REACT_APP_API_KEY;
+const URL_API = process.env.NEXT_PUBLIC_API_URL;
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 export default async function genre() {
   let headersList = {
